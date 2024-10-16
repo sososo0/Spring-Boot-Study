@@ -2,7 +2,6 @@ package com.server.springboot.service;
 
 import com.server.springboot.domain.Member;
 import com.server.springboot.repository.MemberRepository;
-import com.server.springboot.repository.MemoryMemberRepository;
 
 import java.util.List;
 import java.util.Optional;
