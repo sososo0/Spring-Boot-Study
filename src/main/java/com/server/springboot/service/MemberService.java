@@ -19,11 +19,19 @@ public class MemberService {
 
     // 회원 가입
     public Long join(Member member) {
-        // 같은 이름이 있는 중복 회원은 안된다.
-        validateDuplicateMember(member);
+        long start = System.currentTimeMillis();
 
-        memberRepository.save(member);
-        return member.getId();
+        try {
+            // 같은 이름이 있는 중복 회원은 안된다
+            validateDuplicateMember(member);
+
+            memberRepository.save(member);
+            return member.getId();
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish - start;
+            System.out.println("join = " + timeMs + " ms");
+        }
     }
 
     private void validateDuplicateMember(Member member) {
