@@ -12,10 +12,10 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class MemoryMemberRepositoryTest {
     MemberRepository memberRepository = new MemoryMemberRepository();
 
-    @AfterEach // 각 테스트 후에 정리 작업을 수행한다. cf. BeforeEach는 수행 전에
-    public void afterEach() {
-        memberRepository.clearStore();
-    }
+//    @AfterEach // 각 테스트 후에 정리 작업을 수행한다. cf. BeforeEach는 수행 전에
+//    public void afterEach() {
+//        memberRepository.clearStore();
+//    }
 
     @Test
     public void save() {
