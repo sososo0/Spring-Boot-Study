@@ -1,6 +1,7 @@
 package com.server.springboot.controller;
 
 import com.server.springboot.domain.Member;
+import com.server.springboot.domain.MemberForm;
 import com.server.springboot.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

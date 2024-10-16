@@ -1,4 +1,4 @@
-package com.server.springboot.controller;
+package com.server.springboot.domain;
 
 public class MemberForm {
     private String name;
