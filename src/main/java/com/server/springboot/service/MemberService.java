@@ -3,18 +3,14 @@ package com.server.springboot.service;
 import com.server.springboot.domain.Member;
 import com.server.springboot.repository.MemberRepository;
 import com.server.springboot.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemoryMemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
